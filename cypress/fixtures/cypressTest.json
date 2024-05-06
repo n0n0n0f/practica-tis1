@@ -1,7 +1,13 @@
 {
-    "main_url": "https://dev.profteam.su/login",
+    "auth_url": "https://dev.profteam.su/login",
+
+
+    
     "none_existent_login": "qwerty1",
     "login": "qwerty",
+
+
+    
     "none_existent_password": "Password2",
     "password": "Password1"
 }

@@ -1,5 +1,5 @@
 
-describe('Авторизация негативная', () => {
+describe('Авторизация негативная, логин', () => {
   it('Not-existent login test', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')

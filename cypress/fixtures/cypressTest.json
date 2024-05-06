@@ -1,13 +1,26 @@
 {
     "auth_url": "https://dev.profteam.su/login",
+    "regist_url": "https://dev.profteam.su/registration",
 
 
-    
     "none_existent_login": "qwerty1",
-    "login": "qwerty",
+    "login": "qwertyui",
 
-
-    
     "none_existent_password": "Password2",
-    "password": "Password1"
+    "password": "Password1",
+
+    "email": "qwertyui@gmail.com",
+    "none_existent_email": "qwerty.gmail.ru",
+
+    "surname": "Иванов",
+    "none_existent_surname": "Ivanov",
+
+    "name": "Иван",
+    "none_existent_name": "Ivan",
+
+    "patronymic": "Иванович",
+    "none_existent_patronymic": "Ivanovich"
+
+
 }
+

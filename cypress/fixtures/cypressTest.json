@@ -4,13 +4,13 @@
 
 
     "none_existent_login": "qwerty1",
-    "login": "qwertyui",
+    "login": "mongol",
 
-    "none_existent_password": "Password2",
+    "none_existent_password": "Password",
     "password": "Password1",
 
-    "email": "qwertyui@gmail.com",
-    "none_existent_email": "qwerty.gmail.ru",
+    "email": "qwertyuio@gmail.com",
+    "none_existent_email": "qwertyu.gmail.ru",
 
     "surname": "Иванов",
     "none_existent_surname": "Ivanov",
@@ -19,7 +19,10 @@
     "none_existent_name": "Ivan",
 
     "patronymic": "Иванович",
-    "none_existent_patronymic": "Ivanovich"
+    "none_existent_patronymic": "Ivanovich",
+
+    "educ": "ТПУ",
+    "none_existent_educ": "TPU"
 
 
 }

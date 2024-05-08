@@ -22,7 +22,16 @@
     "none_existent_patronymic": "Ivanovich",
 
     "educ": "ТПУ",
-    "none_existent_educ": "TPU"
+    "none_existent_educ": "TPU",
+    "com_org": "Трансгаз",
+
+    "name_org_com": "Образовательное учреждение имени Натана",
+    "address_org_com": "Пушкина 3",
+    "info_org": "Наше образовательное учреждение основывается на развитие скрытых талантов учеников и их продвижение по лестнице знаний",
+    
+    "none_existent_name_org_com": "Нечего-делать\/",
+    "none_existent_address": "Пушкина 29/2",
+    "none_existent_info": "Мы банкроты хотим льготы[]"
 
 
 }

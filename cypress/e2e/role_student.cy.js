@@ -23,6 +23,8 @@ describe('Добавление роли Студента(позитивная)',
               cy.log('Клик по кнопке выбрать роль Студента')
               cy.get('.select-role-form > :nth-child(3)')
                   .click()
+                  cy.log("Проверка что пользователь успешно добавил роль");
+                  cy.url().should('equal', 'https://dev.profteam.su/account/main');    
     })
   })
 })

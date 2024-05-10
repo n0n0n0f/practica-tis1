@@ -142,7 +142,8 @@ describe('Добавления роли ОУ(негативная) - новая/
           cy.log('Клик по кнопке добавить')
           cy.get('.create-company-form__description-block > .button')
           .click()
-          
+          cy.log("Проверка что пользователь успешно добавил роль");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');    
                  
     })
   })
@@ -195,7 +196,8 @@ describe('Добавления роли ОУ(негативная) - новая/
           cy.log('Клик по кнопке добавить')
           cy.get('.create-company-form__description-block > .button')
           .click()
-          
+          cy.log("Проверка что пользователь успешно добавил роль");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');    
                  
     })
   })

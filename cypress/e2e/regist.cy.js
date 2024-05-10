@@ -40,6 +40,8 @@ describe('Регистрация', () => {
           cy.log('Клик по кнопке войти')
         cy.get(':nth-child(3) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно зарегистрировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
 
 
 

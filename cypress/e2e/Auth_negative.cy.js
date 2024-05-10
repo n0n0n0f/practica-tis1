@@ -16,6 +16,8 @@ describe('Авторизация негативная, логин', () => {
        cy.log('Клик по кнопке войти')
       cy.get(':nth-child(3) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно авторизировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })
@@ -38,6 +40,8 @@ describe('Авторизация негативная, пароль', () => {
        cy.log('Клик по кнопке войти')
       cy.get(':nth-child(3) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно авторизировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })

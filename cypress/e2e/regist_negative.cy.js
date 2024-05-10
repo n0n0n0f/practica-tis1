@@ -23,6 +23,8 @@ describe('Регистрация негативная, логин', () => {
        cy.log('Клик по кнопке войти')
       cy.get(':nth-child(4) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно зарегистрировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })
@@ -53,6 +55,8 @@ describe('Регистрация негативная, почта', () => {
        cy.log('Клик по кнопке войти')
       cy.get(':nth-child(4) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно зарегистрировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })
@@ -82,6 +86,8 @@ describe('Регистрация негативная, пароль (1)', () => 
        cy.log('Клик по кнопке войти')
       cy.get(':nth-child(4) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно зарегистрировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })
@@ -111,6 +117,8 @@ describe('Регистрация негативная, пароль (2)', () => 
        cy.log('Клик по кнопке войти')
       cy.get(':nth-child(4) > .button')
           .click()
+          cy.log("Проверка что пользователь успешно зарегистрировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })

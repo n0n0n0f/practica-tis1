@@ -1,4 +1,4 @@
-describe('Авторизация', () => {
+describe('Создание роли Коммерческой организации(позитивная) - Существующая', () => {
   it('Auth test', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
@@ -39,12 +39,14 @@ describe('Авторизация', () => {
                           cy.log('Клик по кнопке для подтверждения')
                           cy.get('.choose-company > .button')
                               .click()
+                              cy.log("Проверка что пользователь успешно ");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
     })
   })
 })
 
 
-describe('Авторизация', () => {
+describe('Создание роли Коммерческой организации(позитивная) - Новая', () => {
   it('Auth test', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
@@ -89,6 +91,8 @@ describe('Авторизация', () => {
           cy.log('Клик по кнопке добавить')
           cy.get('.create-company-form__description-block > .button')
           .click()
+          cy.log("Проверка что пользователь успешно авторизировался");
+          cy.url().should('equal', 'https://dev.profteam.su/account/main');
           
                  
     })

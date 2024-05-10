@@ -1,4 +1,4 @@
-describe('Авторизация', () => {
+describe('Добавления роли ОУ(позитивная) - существующая', () => {
   it('Auth test', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
@@ -44,7 +44,7 @@ describe('Авторизация', () => {
 })
 
 
-describe('Авторизация', () => {
+describe('Добавления роли ОУ(позитивная) - новая', () => {
   it('Auth test', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')

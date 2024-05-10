@@ -1,4 +1,4 @@
-describe('Авторизация', () => {
+describe('Добавление роли Студента(позитивная)', () => {
   it('Auth test', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')

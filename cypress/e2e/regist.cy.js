@@ -42,9 +42,6 @@ describe('Регистрация', () => {
           .click()
           cy.log("Проверка что пользователь успешно зарегистрировался");
           cy.url().should('equal', 'https://dev.profteam.su/account/main');
-
-
-
     })
   })
 })

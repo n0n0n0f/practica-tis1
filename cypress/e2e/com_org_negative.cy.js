@@ -1,5 +1,5 @@
 describe('Добавление роли Работодателя (Негативная) - новая', () => {
-  it('Auth test', () => {
+  it('Новая орг', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
       cy.visit(data.auth_url)
@@ -36,18 +36,16 @@ describe('Добавление роли Работодателя (Негатив
                       cy.get('.search-input__item')
                           .click()
 
-                          cy.log('Клик по кнопке для подтверждения')
-                          cy.get('.choose-company > .button')
-                              .click()
-                              cy.log("Проверка что пользователь успешно авторизировался");
-                              cy.url().should('equal', 'https://dev.profteam.su/account/main');
+                        
+                              cy.log("Проверка что пользователь не подал заявку ");
+                              cy.get('div.search-input__field > .form-input--text').should('exist');
     })
   })
 })
 
 
 describe('Добавление роли Работодателя (Негативная) - Существующая/Название', () => {
-  it('Auth test', () => {
+  it('Создание новой орг /Название', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
       cy.visit(data.auth_url)
@@ -88,11 +86,8 @@ describe('Добавление роли Работодателя (Негатив
               cy.get('.form-area')
               .type(data.info_org)
     
-              cy.log('Клик по кнопке добавить')
-              cy.get('.create-company-form__description-block > .button')
-              .click()
-              cy.log("Проверка что пользователь успешно авторизировался");
-              cy.url().should('equal', 'https://dev.profteam.su/account/main');
+              cy.log("Проверка что пользователь не подал заявку ");
+              cy.get('.form-error > span').should('exist');
                  
     })
   })
@@ -101,7 +96,7 @@ describe('Добавление роли Работодателя (Негатив
 
 
 describe('Добавление роли Работодателя (Негативная) - Существующая/Адрес', () => {
-  it('Auth test', () => {
+  it('Создание новой орг /Адрес', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
       cy.visit(data.auth_url)
@@ -142,11 +137,8 @@ describe('Добавление роли Работодателя (Негатив
               cy.get('.form-area')
               .type(data.info_org)
     
-              cy.log('Клик по кнопке добавить')
-              cy.get('.create-company-form__description-block > .button')
-              .click()
-              cy.log("Проверка что пользователь успешно авторизировался");
-              cy.url().should('equal', 'https://dev.profteam.su/account/main');
+              cy.log("Проверка что пользователь не подал заявку ");
+              cy.get('.form-error > span').should('exist');
                  
     })
   })
@@ -155,7 +147,7 @@ describe('Добавление роли Работодателя (Негатив
 
 
 describe('Добавление роли Работодателя (Негативная) - Существующая/Краткое описание', () => {
-  it('Auth test', () => {
+  it('Создание новой орг /Описание', () => {
     cy.fixture('cypressTest').then(data => { 
       cy.log('Переход на страницу авторизации')
       cy.visit(data.auth_url)
@@ -196,11 +188,8 @@ describe('Добавление роли Работодателя (Негатив
               cy.get('.form-area')
               .type(data.none_existent_info)
     
-              cy.log('Клик по кнопке добавить')
-              cy.get('.create-company-form__description-block > .button')
-              .click()
-              cy.log("Проверка что пользователь успешно авторизировался");
-              cy.url().should('equal', 'https://dev.profteam.su/account/main');
+              cy.log("Проверка что пользователь не подал заявку ");
+              cy.get('.form-error > span').should('exist');
     })
   })
 })

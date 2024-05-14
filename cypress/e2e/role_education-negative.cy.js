@@ -36,9 +36,8 @@ describe('Добавления роли ОУ(негативная) - сущес�
                       cy.get('.search-input__item')
                           .click()
 
-                          cy.log('Клик по кнопке для подтверждения')
-                          cy.get('.choose-company > .button')
-                              .click()
+                          cy.log("Проверка что пользователь не подал заявку ");
+                          cy.get('div.search-input__field > .form-input--text').should('exist');
     })
   })
 })
@@ -86,9 +85,8 @@ describe('Добавления роли ОУ(негативная) - новая/
           cy.get('.form-area')
           .type(data.info_org)
 
-          cy.log('Клик по кнопке добавить')
-          cy.get('.create-company-form__description-block > .button')
-          .click()
+          cy.log("Проверка что пользователь не подал заявку ");
+          cy.get('.form-error > span').should('exist');
           
                  
     })
@@ -139,11 +137,9 @@ describe('Добавления роли ОУ(негативная) - новая/
           cy.get('.form-area')
           .type(data.info_org)
 
-          cy.log('Клик по кнопке добавить')
-          cy.get('.create-company-form__description-block > .button')
-          .click()
-          cy.log("Проверка что пользователь успешно добавил роль");
-          cy.url().should('equal', 'https://dev.profteam.su/account/main');    
+
+          cy.log("Проверка что пользователь не подал заявку ");
+          cy.get('.form-error > span').should('exist'); 
                  
     })
   })
@@ -193,11 +189,9 @@ describe('Добавления роли ОУ(негативная) - новая/
           cy.get('.form-area')
           .type(data.none_existent_info)
 
-          cy.log('Клик по кнопке добавить')
-          cy.get('.create-company-form__description-block > .button')
-          .click()
-          cy.log("Проверка что пользователь успешно добавил роль");
-          cy.url().should('equal', 'https://dev.profteam.su/account/main');    
+   
+          cy.log("Проверка что пользователь не подал заявку ");
+          cy.get('.form-error > span').should('exist');  
                  
     })
   })

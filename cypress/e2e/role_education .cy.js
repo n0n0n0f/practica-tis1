@@ -39,8 +39,11 @@ describe('Добавления роли ОУ(позитивная) - сущес�
                           cy.log('Клик по кнопке для подтверждения')
                           cy.get('.choose-company > .button')
                               .click()
-                              cy.log("Проверка что пользователь успешно добавил роль");
-          cy.url().should('equal', 'https://dev.profteam.su/account/main');
+                              cy.log('Переход во вкладку заявки')
+                              cy.get(':nth-child(3) > .menu-item__item-name')
+                              .click()
+                              cy.log("Проверка что пользователь успешно подал заявку ");
+              cy.get('.shared-list-item').should('exist');
     })
   })
 })
@@ -78,11 +81,11 @@ describe('Добавления роли ОУ(позитивная) - новая'
 
           cy.log('Ввод название организации')
           cy.get(':nth-child(1) > .form-control--medium > .form-input--text')
-          .type(data.name_org)
+          .type(data.name_org_com)
 
           cy.log('Ввод адреса организации')
           cy.get(':nth-child(2) > .form-control--medium > .form-input--text')
-          .type(data.address_org)
+          .type(data.address_org_com)
 
           cy.log('Ввод краткой информации об организации')
           cy.get('.form-area')
@@ -91,9 +94,11 @@ describe('Добавления роли ОУ(позитивная) - новая'
           cy.log('Клик по кнопке добавить')
           cy.get('.create-company-form__description-block > .button')
           .click()
-
-          cy.log("Проверка что пользователь успешно добавил роль");
-          cy.url().should('equal', 'https://dev.profteam.su/account/main');         
+          cy.log('Переход во вкладку заявки')
+          cy.get(':nth-child(3) > .menu-item__item-name')
+          .click()
+         cy.log("Проверка что пользователь успешно подал заявку ");
+              cy.get('.shared-list-item').should('exist');       
     })
   })
 })
